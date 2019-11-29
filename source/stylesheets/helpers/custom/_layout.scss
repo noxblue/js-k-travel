@@ -1,0 +1,225 @@
+.bg-cover{
+	background-size: cover;
+	background-position: center center;
+}
+.kv-header{
+    height: 380px;
+    h1{
+        padding-top: 89px;
+        margin-bottom: 0;
+    }
+    .chooseZoneSelect{
+        margin-top:96px;
+        position: relative;
+        /* 透過::after建立客製化向下箭頭 */
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            /* 用border建立箭頭本身 */
+            border: 1px solid transparent;
+            width: 0;
+            height: 0;
+            /* 透過border寬度建立箭頭長相:上高 左寬 下高 右寬 */
+            border-width: 11px 8px 0 8px;
+            /* 需求是上方區塊的border，設定border-top-color顯示 */
+            border-top-color: #000;
+            right: 17px;
+            top: 40%;
+        }
+        select{
+            height: 48px;
+            border: 3px solid #fff;
+            background-color: rgba(255,255,255,0.70);
+            padding: 0 8px;
+            font-weight: bold;
+            /* 清除select預設向下箭頭 */
+            -moz-appearance: none;
+            /* Firefox */
+            -webkit-appearance: none;
+            /* Safari and Chrome */
+            appearance: none;
+        }
+    }
+}
+.hot-zone{
+    margin-top: -30px;
+    padding: 20px 26px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    h4{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    button{
+        width: 130px;
+        height: 42px;
+        text-align: center;
+        margin: 0 15px;
+        color: #fff;
+    }
+}
+.footer-section{
+    background: #559AC8;
+    .footer-title{
+        font-size: 14px;
+        color: #fff;
+    }
+    .footer-source{
+        font-size: 14px;
+        color: #FFD366;
+    }
+}
+.contentZone{
+    background-color: #f7f7f7;
+}
+.horizon{
+    margin-top: 37px;
+    position: relative;
+    height: 24px;
+    width: 100%;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      transform:translateY(-50%);
+      border: 1px dashed #559AC8;
+      
+    } 
+    .circle{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform:translateX(-50%);
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        border:2px solid #559AC8;
+        background-color: #fff;
+    }
+    .down-arrow{
+        position: absolute;
+        z-index: 2;
+        top: 40%;
+        left: 50%;
+        transform:translateX(-50%);
+        width: 0;
+        height: 0;
+        border-color: #559AC8 transparent transparent transparent;
+        border-style: solid;
+        border-width: 8px;
+    }
+}
+.list-zone{
+    position: relative;
+    .zone-title{
+        color: #8A82CC;
+        font-size: 36px;
+        margin-top: 65px;
+        margin-bottom: 24px;
+    }
+    .travel-item{
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+        margin-bottom: 36px;
+        .item-img{
+            height: 155px;
+            position: relative;
+            .img-cover{
+                background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.54) 100%);;
+                width: 100%;
+                height: 52px;
+                position: absolute;
+                bottom: 0px;
+                z-index: 1;
+            }
+            .item-name{
+                position: absolute;
+                left: 22px;
+                bottom: 14px;
+                color: #fff;
+                font-size: 24px;
+                z-index: 2;
+            }
+            .item-zone{
+                position: absolute;
+                right: 24px;
+                bottom: 11px;
+                color: #fff;
+                font-size: 16px;
+                z-index: 2;
+            }
+        }
+        .item-info{
+            padding: 15px 23px 19px 0;
+            display: flex;
+            flex-direction:column;
+            background-color: #fff;
+            .item-row{
+                display: inline-flex;
+                padding-bottom: 6px;
+            }
+            .content{
+                font-size: 16px;
+                padding-top: 3px;
+            }
+            
+            .open-time{
+                .icon{
+                    padding:0 9px 0 23px;
+                }
+            }
+            .item-add{
+                .icon{
+                    padding:0 10px 0 24px;
+                }
+            }
+            .item-tel{
+                .icon{
+                    padding:0 12px 0 26px;
+                }                
+            }
+            .item-ticketinfo{
+                .icon{
+                    padding: 0 8px 0 0;
+                }
+            }
+        }
+    }
+    .pageNav{
+        margin-top: 20px;
+        ul{
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                padding: 0 12px;
+                a{
+                    color: #4A4A4A;
+                    
+                }
+                .disable{
+                    color: rgba(74,74,74,0.50);
+                }
+                .active{
+                    color: #559AC8;
+                }
+            }
+            .pageNavLi{
+                display: inline-block;
+                padding: 0 10px;
+            }
+            
+        }
+    }
+    .btnGoTop{
+        position: absolute;
+        right: 2px;
+        bottom: 78px;
+        cursor: pointer;
+    }
+}
