@@ -44,8 +44,8 @@ function checkMoreData(callback) {
 
 // 使常數kTravelData為本次總取得資料，作為後續所有funciton執行運用
 const kTravelData = callbackData;
-// 確認kTravelData資料型別，總旅遊資訊長度
-console.log('TypeOf:kTravelData：', typeof (kTravelData), 'Length:kTravelData', kTravelData.length);
+// // 確認kTravelData資料型別，總旅遊資訊長度
+// console.log('TypeOf:kTravelData：', typeof (kTravelData), 'Length:kTravelData', kTravelData.length,'kTravelData',kTravelData);
 
 // 綁定變數chooseZone為使用者透過select選擇區域
 let chooseZone = document.querySelector('#chooseZone');
